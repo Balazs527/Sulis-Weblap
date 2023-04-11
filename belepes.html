@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bejelentkezés</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Bejelentkezés</h3>
+          </div>
+          <div class="panel-body">
+            <form class="form-horizontal" method="post" action="login.php">
+              <div class="form-group">
+                <label for="username" class="col-sm-4 control-label">Felhasználónév</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Felhasználónév">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password" class="col-sm-4 control-label">Jelszó</label>
+                <div class="col-sm-8">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Jelszó">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                  <button type="submit" class="btn btn-primary">Belépés</button>
+                  <p class="message">Még nem regisztráltál? <a href="regisztracio.html"><br>Regisztrálj itt</a></a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
