@@ -1,11 +1,12 @@
-CREATE TABLE users (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(30) NOT NULL,
-  password VARCHAR(30) NOT NULL,
-  email VARCHAR(50) NOT NULL,
-  role ENUM('user', 'admin') DEFAULT 'user' NOT NULL
-);
+CREATE DATABASE db;
+USE db;
 
-INSERT INTO users (username, password, email, role)
-VALUES ('user1', 'user1@example.com', 'password1', 'user'),
-       ('admin1', 'admin1@example.com', 'adminpassword1', 'admin');
+CREATE TABLE 'users' (
+  'id' int(11) NOT NULL AUTO_INCREMENT,
+  'fullname' varchar(100) NOT NULL,
+  'username' varchar(100) NOT NULL,
+  'email' varchar(100) NOT NULL,
+  'password' varchar(255) NOT NULL,
+  'website' varchar(255),
+  PRIMARY KEY ('id')
+);
