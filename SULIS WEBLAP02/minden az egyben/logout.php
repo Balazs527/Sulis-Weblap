@@ -1,15 +1,18 @@
 <?php
-session_start();
+    session_start();
 
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-} else if (isset($_SESSION['user']) != "") {
-    header("Location: home.php");
-}
+    // Unset all session values
+    $_SESSION = array();
 
-if (isset($_GET['logout'])) {
+    // Destroy the session cookie
+    if (isset($_COOKIE[session_name()])) {
+        setcookie(session_name(), '', time()-42000, '/');
+    }
+
+    // Destroy the session
     session_destroy();
-    unset($_SESSION['user']);
-    header("Location: login.php");
+
+    // Redirect to login page
+    header('Location: login.php');
     exit;
-}
+?>
