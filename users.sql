@@ -12,6 +12,6 @@ CREATE TABLE 'users' (
   PRIMARY KEY ('id')
 );
 
-INSERT INTO users (username, password, email, role)
-VALUES ('user1', 'user1@example.com', 'password1', 'user'),
-       ('admin1', 'admin1@example.com', 'adminpassword1', 'admin');
+INSERT INTO users (fullname, username, email, password, website, role)
+VALUES ('user11','user11', 'user1@example.com', 'password1','google.com', 'user'),
+       ('admin11','admin1', 'admin1@example.com', 'adminpassword1', 'google.com', 'admin');
