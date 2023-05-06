@@ -1,15 +1,15 @@
-CREATE DATABASE db;
-USE db;
+CREATE DATABASE sulisweblap;
 
-CREATE TABLE users (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  firstname varchar(100) NOT NULL,
-  lastname varchar(100) NOT NULL,
-  username varchar(100) NOT NULL,
-  email varchar(100) NOT NULL,
-  password varchar(255) NOT NULL,
-  role ENUM('user', 'admin') DEFAULT 'user' NOT NULL,
-  PRIMARY KEY (id)
+USE sulisweblap;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('user', 'admin') DEFAULT 'user' NOT NULL
 );
 
 INSERT INTO users (firstname, lastname, username, email, password, role)
